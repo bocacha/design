@@ -1,0 +1,979 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    background: url(./img/backgroundBitmap.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter:saturate(20%);
+    filter:contrast(2.0);
+    
+    filter:(0.5);
+    
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 34, 3, 0.3);
+    z-index: -1;
+  }
+  
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  .name {
+    margin-top: 35px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  .btns {
+    margin-top: 35px;
+    margin-right: 10px;
+  }
+  .btn-log {
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    background: none;
+    margin-right: 40px;
+    cursor: pointer;
+  }
+  .btn-sign {
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    color: #fff;
+    border: solid 1px #fff;
+    padding: 5px 10px;
+    border-radius: 40px;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .center {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 52px;
+    font-weight: bold;
+    margin-top: 90px;
+  }
+  
+  .subtitle {
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    font-weight: 300;
+    font-size: 24px;
+  }
+  
+  .btnCenter {
+    padding-bottom: 110px;
+  }
+  .btn-center {
+    background-color: #ff4e50;
+    width: fit-content;
+    border: none;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 40px;
+    cursor: pointer;
+    border: 1px solid #ff4e50;
+    transition: all 0.4s ease;
+  }
+  .btn-center:hover {
+    background: none;
+    border: 1px solid #ff4e50;
+  }
+  
+  .cards {
+    min-height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .titleSections {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 80px;
+    margin-bottom: 20px;
+  }
+  .cardsContainer {
+    width: 70%;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    row-gap: 1rem;
+    justify-content: space-between;
+  }
+  
+  .card1 {
+    background-image: url(./img/Step1.png);
+    max-width: 300px;
+    height: 400px;
+    position: relative;
+    color: white;
+    z-index: 1;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.2s ease;
+  }
+  
+  .card1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+  }
+  
+  .card2 {
+    background-image: url(./img/Step2.png);
+    max-width: 300px;
+    height: 400px;
+    position: relative;
+    color: white;
+    z-index: 1;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.2s ease;
+  }
+  
+  .card2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+  }
+  .card3 {
+    background-image: url(./img/Step3.png);
+    max-width: 300px;
+    height: 400px;
+    position: relative;
+    color: white;
+    z-index: 1;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.2s ease;
+  }
+  
+  .card3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+  }
+  
+  .card1:hover,
+  .card2:hover,
+  .card3:hover {
+    box-shadow: 0 0 17px rgba(33, 33, 33, 0.4);
+  }
+  
+  .buttom {
+    min-height: 45%;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .btn-steps {
+    background-color: #ff4e50;
+    width: fit-content;
+    padding: 5px 19px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    color: #fff;
+    border-radius: 40px;
+  }
+  .title-cards {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .subtitle-cards {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  
+  .partner {
+    margin-top: 50px;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .characters-grid {
+    margin-top: 40px;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    width: 65%;
+    justify-content: space-between;
+  }
+  
+  .characters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .hobby1 {
+    background-color: #ff4e50;
+    padding: 9px;
+    border-radius: 50%;
+    position: relative;
+    margin-left: -30px;
+  }
+  
+  .hobby2 {
+    background-color: #19d4ca;
+    padding: 9px;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: -33px;
+    margin-top: 86px;
+  }
+  
+  .hobby3 {
+    background-color: #ffa710;
+    padding: 9px;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: -33px;
+    margin-top: 87px;
+  }
+  
+  .hobby4 {
+    background-color: #667df3;
+    padding: 9px;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: -33px;
+    margin-top: 87px;
+  }
+  .char-names {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .presentation {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+  }
+  .btnMorePartner {
+    margin-top: 30px;
+  }
+  .btn-more {
+    padding: 10px 20px;
+    background: none;
+    border: 2px solid #ff4e50;
+    color: #ff4e50;
+    border-radius: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+  .btn-more:hover {
+    background: none;
+    border: 2px solid #ff4e50;
+    background-color: #ff4e50;
+    color: #fff;
+  }
+  
+  .activity {
+    min-height: 120vh;
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 55px;
+    margin-right: auto;   */
+    width: 100%;
+  }
+  
+  .test {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+  }
+  
+  .gridAct {
+    margin-top: 40px;
+    display: grid;
+    gap: 2.5%;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    justify-content: space-between;
+    width: 100%;
+    /* max-width: 1000px; */
+  }
+  
+  .act1 {
+      background-image: url(./img/Sports.png);
+      width: 300px;
+      height: 320px;
+      border-radius: 14px;
+      position: relative;
+      color: #fff;
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      
+      transition: all 0.2s ease;
+  }
+  
+  .act1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+  }
+  
+  .act2 {
+    background-image: url(./img/Wellness.png);
+    width: 300px;
+    height: 310px;
+    position: relative;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+  
+  .act2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+  }
+  
+  .act3 {
+    background-image: url(./img/Extreme.png);
+    width: 300px;
+    height: 310px;
+    position: relative;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+  
+  .act3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+  }
+  
+  .act4 {
+    background-image: url(./img/Games.png);
+    width: 300px;
+    height: 310px;
+    position: relative;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+  
+  .act4::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+  }
+  
+  .act5 {
+    background-image: url(./img/culture.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 630px;
+    height: 310px;
+    position: relative;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    border-radius: 4px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    transition: all 0.2s ease;
+  }
+  
+  .act5::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+  }
+  
+  .act6 {
+    background-image: url(./img/enjoymentRelaxation.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 620px;
+    height: 310px;
+    position: relative;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    border-radius: 4px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    transition: all 0.2s ease;
+  }
+  
+  .act6::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+  }
+  
+  .act7 {
+    background-image: url(./img/Traveling.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 310px;
+    position: relative;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+  
+  .act7::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+  }
+  
+  .act1:hover,
+  .act2:hover,
+  .act3:hover,
+  .act4:hover,
+  .act5:hover,
+  .act6:hover,
+  .act7:hover {
+    box-shadow: 0 0 17px rgba(33, 33, 33, 0.4);
+  }
+  
+  .search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 90px;
+  }
+  
+  .subtitleInp {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+  }
+  
+  .input {
+    width: 540px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .inputSearch {
+    border: 1px solid #d4d4d4;
+    padding: 10px 20px;
+    width: 270px;
+    border-radius: 4px;
+  }
+  
+  .btn-submit {
+    background-color: #ff4e50;
+    border: 1px solid #ff4e50;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px 35px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .btn-submit:hover {
+    background: none;
+    border: 1px solid #ff4e50;
+    color: #000;
+  }
+  
+  .footer {
+    min-height: 20vh;
+    border-top: 3px solid #ff4e50;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footer-cont {
+    margin-top: 20px;
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+  
+  .titlefooter {
+    color: #ff4e50;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+  }
+  
+  .footerheaders {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .ul {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+  }
+  .li {
+    list-style: none;
+    cursor: pointer;
+  }
+  
+  .li:hover {
+    font-weight: bold;
+  }
+  
+  .designcont {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+  
+  .design {
+    color: #cccccc;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+  }
+  
+  @media (min-width: 320px) {
+    .act1,
+    .act2,
+    .act3,
+    .act4,
+    .act5,
+    .act6,
+    .act7 {
+      width: 300px;
+      height: 120px;
+      margin-bottom: 20px;
+      background-repeat: no-repeat;
+    }
+  
+    .gridAct{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+    }
+    .footer-cont {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+  
+  
+    .testt {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .testt {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      justify-items: center;
+    }
+    .ulmit {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .titleSections {
+      text-align: center;
+    }
+    .input {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      justify-items: center;
+      width: 100%;
+    }
+    .inputSearch {
+      width: 80%;
+    }
+    .btn-submit {
+      width: 90%;
+      margin-top: 10px;
+    }
+    .partner {
+      text-align: center;
+    }
+    .cardsContainer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      justify-items: center;
+    }
+    .nav {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .title {
+      text-align: center;
+      font-size: 32px;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 24px;
+    }
+    .container {
+      background-position: 52% 52%;
+    }
+    .test,
+    .activity{
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  
+    .title {
+      text-align: center;
+      font-size: 52px;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 26px;
+    }
+    .cardsContainer {
+      width: 65%;
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+      row-gap: 1rem;
+      justify-content: space-between;
+    }
+    .act1,
+    .act2,
+    .act3,
+    .act4,
+    .act7 {
+      width: 300px;
+      height: 310px;
+      margin-bottom: 20px;
+    }
+    .act5 {
+      background-image: url(./img/culture.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 630px;
+      height: 310px;
+      position: relative;
+      color: #fff;
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      border-radius: 4px;
+      grid-column-start: 2;
+      grid-column-end: 4;
+      transition: all 0.2s ease;
+    }
+    .act6 {
+      background-image: url(./img/enjoymentRelaxation.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 620px;
+      height: 310px;
+      position: relative;
+      color: #fff;
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      border-radius: 4px;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      transition: all 0.2s ease;
+    }
+    .activity {
+      min-height: 120vh;
+      display: flex;
+      flex-direction: column;
+      margin-left: 55px;
+      margin-right: auto;
+      width: 100%;
+    }
+    .gridAct {
+      margin-top: 40px;
+      display: grid;
+      gap: 2.5%;
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+      justify-content: space-between;
+      align-self: center;
+      width: 65%;
+      overflow-y: hidden;
+    }
+    .search {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0px;
+      margin-bottom: 90px;
+    }
+  
+    .subtitleInp {
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      font-size: 18px;
+    }
+  
+    .input {
+      width: 540px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+  
+    .inputSearch {
+      border: 1px solid #d4d4d4;
+      padding: 10px 20px;
+      width: 270px;
+      border-radius: 4px;
+    }
+  
+    .btn-submit {
+      background-color: #ff4e50;
+      border: 1px solid #ff4e50;
+      color: #fff;
+      font-family: "Roboto", sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      padding: 10px 35px;
+      border-radius: 40px;
+      cursor: pointer;
+      width: fit-content;
+      transition: all 0.2s ease;
+    }
+    .footer {
+      min-height: 20vh;
+      border-top: 3px solid #ff4e50;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .footer-cont {
+      margin-top: 20px;
+      width: 65%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: start;
+    }
+  
+    .titlefooter {
+      color: #ff4e50;
+      font-family: "Montserrat", sans-serif;
+      font-size: 16px;
+    }
+  
+    .footerheaders {
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .ulmit {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+    .test,
+    .activity{
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }
+  
